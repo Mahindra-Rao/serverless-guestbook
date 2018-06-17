@@ -10,6 +10,13 @@ function main(params) {
       fname: row.doc.fname,
 	    sname: row.doc.sname,
 	    SSN: row.doc.SSN,
+	    addr: row.doc.addr,
+    	    zip: row.doc.zip,
+            dob: row.doc.dob,
+            hp: row.doc.hp,
+            email: row.doc.email,
+            SSN: row.doc.SSN,
+            cship: row.doc.cship,
 	    createdAt: row.doc.createdAt,
 	    icon: (row.doc.SSN ? `https://secure.gravatar.com/avatar/${md5.hash(row.doc.SSN.trim().toLowerCase())}?s=64` : null)
     }})
