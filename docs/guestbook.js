@@ -13,7 +13,7 @@ const guestbook = {
   },
   // add a single guestbood entry
   add(fname, sname, SSN) {
-    console.log('Sending', fname, sname, snumb)
+    console.log('Sending', fname, sname, SSN)
     return $.ajax({
       type: 'PUT',
       url: `${apiUrl}/entries`,
@@ -21,7 +21,7 @@ const guestbook = {
       data: JSON.stringify({
         fname,
         sname,
-        snumb,
+        SSN,
       }),
       dataType: 'json',
     });
@@ -63,7 +63,7 @@ const guestbook = {
     guestbook.add(
       $('#fname').val().trim(),
       $('#sname').val().trim(),
-      $('#snumb').val().trim()
+      $('#SSN').val().trim()
     ).done(function(result) {
       // reload entries
       loadEntries();
