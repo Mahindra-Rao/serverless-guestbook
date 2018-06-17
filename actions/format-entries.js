@@ -7,9 +7,9 @@ function main(params) {
   // params contain the "rows" coming from Cloudant including the full documents
   return {
     entries: params.rows.map((row) => { return {
-      name: row.doc.fname,
-	    email: row.doc.sname,
-	    comment: row.doc.SSN,
+      fname: row.doc.fname,
+	    sname: row.doc.sname,
+	    SSN: row.doc.SSN,
 	    createdAt: row.doc.createdAt,
 	    icon: (row.doc.SSN ? `https://secure.gravatar.com/avatar/${md5.hash(row.doc.SSN.trim().toLowerCase())}?s=64` : null)
     }})
