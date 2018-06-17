@@ -12,8 +12,8 @@ const guestbook = {
     });
   },
   // add a single guestbood entry
-  add(fname, sname, SSN) {
-    console.log('Sending', fname, sname, SSN)
+  add(fname, sname, addr, city, state, zip, dob, hp, email, SSN, cship) {
+    console.log('Sending', fname, sname, addr,city,state,zip,dob,hp,email, SSN, cship)
     return $.ajax({
       type: 'PUT',
       url: `${apiUrl}/entries`,
@@ -21,7 +21,15 @@ const guestbook = {
       data: JSON.stringify({
         fname,
         sname,
+        addr,
+        city,
+        state,
+        zip,
+        dob,
+        hp,
+        email,
         SSN,
+        cship
       }),
       dataType: 'json',
     });
@@ -63,7 +71,15 @@ const guestbook = {
     guestbook.add(
       $('#fname').val().trim(),
       $('#sname').val().trim(),
-      $('#SSN').val().trim()
+      $('#addr').val().trim(),
+      $('#city').val().trim(),
+      $('#state').val().trim(),
+      $('#zip').val().trim(),
+      $('#dob').val().trim(),
+      $('#hp').val().trim(),
+      $('#email').val().trim(),
+      $('#SSN').val().trim(),
+      $('#cship').val().trim(),
     ).done(function(result) {
       // reload entries
       loadEntries();
