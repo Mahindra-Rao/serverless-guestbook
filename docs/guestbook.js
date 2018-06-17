@@ -12,16 +12,16 @@ const guestbook = {
     });
   },
   // add a single guestbood entry
-  add(name, email, comment) {
-    console.log('Sending', name, email, comment)
+  add(fname, sname, SSN) {
+    console.log('Sending', fname, sname, SSN)
     return $.ajax({
       type: 'PUT',
       url: `${apiUrl}/entries`,
       contentType: 'application/json; charset=utf-8',
       data: JSON.stringify({
-        name,
-        email,
-        comment,
+        fname,
+        sname,
+        SSN,
       }),
       dataType: 'json',
     });
@@ -61,9 +61,9 @@ const guestbook = {
     e.preventDefault();
 
     guestbook.add(
-      $('#name').val().trim(),
-      $('#email').val().trim(),
-      $('#comment').val().trim()
+      $('#fname').val().trim(),
+      $('#sname').val().trim(),
+      $('#SSN').val().trim()
     ).done(function(result) {
       // reload entries
       loadEntries();
