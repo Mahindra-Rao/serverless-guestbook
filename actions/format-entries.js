@@ -9,7 +9,6 @@ function main(params) {
     entries: params.rows.map((row) => { return {
       fname: row.doc.fname,
 	    sname: row.doc.sname,
-	    SSN: row.doc.SSN,
 	    addr: row.doc.addr,
     	    zip: row.doc.zip,
             dob: row.doc.dob,
