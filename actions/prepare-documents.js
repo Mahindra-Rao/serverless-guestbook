@@ -11,7 +11,15 @@ function main(params) {
       createdAt: new Date(),
 	    fname: params.fname,
 	    sname: params.sname,
+	    addr: parms.addr,
+	    city: parms.city,
+	    state: parms.state,
+	    zip: parms.zip,
+	    dob: parms.dob,
+	    hp: parms.hp,
+	    email: parms.email,	    
 	    SSN: params.SSN,
+	    cship: params.cship,
 	  }
   };
 }
